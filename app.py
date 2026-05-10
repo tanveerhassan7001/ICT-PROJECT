@@ -1,6 +1,8 @@
 import streamlit as st
+        st.success(f"Millimeters: {mm:.2f} mm")
+        st.success(f"Feet: {feet:.2f} ft")
 
-    # PRESSURE
+    # Pressure Conversion
     elif conversion_type == "Pressure":
         value = st.number_input("Enter value in Pascal", min_value=0.0)
 
@@ -12,17 +14,17 @@ import streamlit as st
         st.success(f"Bar: {bar:.4f} bar")
         st.success(f"PSI: {psi:.4f} psi")
 
-    # TEMPERATURE
+    # Temperature Conversion
     elif conversion_type == "Temperature":
         value = st.number_input("Enter temperature in Celsius")
 
-        fahrenheit = (value * 9/5) + 32
+        fahrenheit = (value * 9 / 5) + 32
         kelvin = value + 273.15
 
         st.success(f"Fahrenheit: {fahrenheit:.2f} °F")
         st.success(f"Kelvin: {kelvin:.2f} K")
 
-    # WEIGHT
+    # Weight Conversion
     elif conversion_type == "Weight":
         value = st.number_input("Enter weight in kilograms", min_value=0.0)
 
@@ -32,9 +34,9 @@ import streamlit as st
         st.success(f"Grams: {grams:.2f} g")
         st.success(f"Pounds: {pounds:.2f} lb")
 
-# -----------------------------
+# =========================
 # MATERIAL DENSITY CHECKER
-# -----------------------------
+# =========================
 elif menu == "Material Density Checker":
 
     st.header("Material Density Checker")
